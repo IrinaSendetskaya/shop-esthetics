@@ -1,13 +1,41 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
+    <img width="60" height="35" alt="Logo" src="/assets/images/medusa.jpg">
     Welcome to {{ title }}!
   </h1>
-  <img width="30" alt="Logo" src="/assets/images/medusa.jpg">
 </div>
-<button mat-button [matMenuTriggerFor]="menu"><span class="menu__icon"></span><a href="#">Crimson</a><span></span></button>
+
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>menu</mat-icon>
+</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>Item 1</button>
   <button mat-menu-item>Item 2</button>
 </mat-menu>
+
+<mat-carousel
+timings="250ms ease-in"
+  [autoplay]="true"
+  interval="5000"
+  color="accent"
+  maxWidth="auto"
+  proportion="25"
+  slides="3"
+  [loop]="true"
+  [hideArrows]="false"
+  [hideIndicators]="false"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+>
+  <mat-carousel-slide
+  #matCarouselSlide
+    *ngFor="let slide of slides; let i = index"
+    [image]="slide"
+    overlayColor="#00000040"
+    [hideOverlay]="false"
+    >
+  </mat-carousel-slide>
+</mat-carousel>
+
 <router-outlet></router-outlet>
