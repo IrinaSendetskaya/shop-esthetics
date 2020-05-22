@@ -5,24 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+import {SharedModule} from './shared/shared.module';
+import {CoreModule} from './core/core.module';;
+import {FeaturesModule} from './features/features.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatCarouselModule.forRoot(),
+    FormsModule,
+    SharedModule,
+    CoreModule,
+    FeaturesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  exports:[],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

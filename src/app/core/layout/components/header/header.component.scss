@@ -1,0 +1,13 @@
+$background-color: rgba(114, 102, 138, 0.486);
+.background {
+    background-color: $background-color;
+}
+.header-navigation-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+
+    .header-navigation-items {
+        align-self: center;
+    }
+}

@@ -1,0 +1,12 @@
+$background-color: rgba(114, 102, 138, 0.486);
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+
+    .layout-footer {
+        background-color: $background-color;
+        height: 5%;
+    }
+}
