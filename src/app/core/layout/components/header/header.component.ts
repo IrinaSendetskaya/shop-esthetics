@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.title='4esthetics';
-    this.logoSrc='/assets/images/medusa.jpg';
+    this.logoSrc='/assets/icons/logo.png';
     // if (this.router.url.indexOf('/labs/') === 0) {
     //   this.items = labsSideNavGroups;
     //   this.labsMode = true;

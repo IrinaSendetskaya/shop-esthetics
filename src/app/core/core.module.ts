@@ -9,6 +9,7 @@ import {
   LayoutComponent,
   NavigationHeaderComponent,
 } from './layout/components';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,10 @@ import {
   imports: [
     CommonModule,
     SharedModule,
+    RouterModule,
   ],
   exports:[
+    LayoutComponent,
   ],
 })
 export class CoreModule { }

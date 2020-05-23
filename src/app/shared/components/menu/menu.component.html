@@ -1,7 +1,40 @@
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+<button mat-icon-button [matMenuTriggerFor]="rootMenu">
     <mat-icon>menu</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
+</button>
+
+  <mat-menu #rootMenu="matMenu">
+    <button mat-menu-item><mat-icon>home</mat-icon>О нас</button>
+    <button mat-menu-item [matMenuTriggerFor]="brandsMenu"><mat-icon>widgets</mat-icon>Бренды</button>
+    <button mat-menu-item [matMenuTriggerFor]="consaltMenu"><mat-icon>style</mat-icon>Подобрать уход</button>
+    <button mat-menu-item [matMenuTriggerFor]="giftMenu"><mat-icon>card_giftcard</mat-icon>Идеи подарков</button>
+    <button mat-menu-item [matMenuTriggerFor]="shopMenu"><mat-icon>shopping_basket</mat-icon>Покупка онлайн</button>
+    <button mat-menu-item><mat-icon>trending_down</mat-icon>Акции</button>
+    <button mat-menu-item><mat-icon>notes</mat-icon>Заметки</button>
+    <button mat-menu-item><mat-icon>nature_people</mat-icon>Наша студия</button>
+    <button mat-menu-item><mat-icon>contacts</mat-icon>Контакты</button>
   </mat-menu>
+  
+  <mat-menu #brandsMenu="matMenu">
+    <button mat-menu-item>Biologique Recharche</button>
+    <button mat-menu-item>Inno-aesthetics dermal</button>
+    <button mat-menu-item>Obagi Zo</button>
+    <button mat-menu-item>Genosys</button>
+    <button mat-menu-item>Dermaheal</button>
+  </mat-menu>
+
+  <mat-menu #consaltMenu="matMenu">
+    <button mat-menu-item>Виртуальный консалт</button>
+  </mat-menu>
+
+  <mat-menu #giftMenu="matMenu">
+    <button mat-menu-item>Индивидуальный подбор бьюти кейсов</button>
+    <button mat-menu-item>Упаковка вашего подарка</button>
+    <button mat-menu-item>Подарочные сертификаты</button>
+  </mat-menu>
+
+  <mat-menu #shopMenu="matMenu">
+    <button mat-menu-item>Тонизация</button>
+    <button mat-menu-item>Очищение</button>
+    <button mat-menu-item>Увлажнение</button>
+  </mat-menu>
+ 
