@@ -1,3 +1,23 @@
-.about-image {
-    //background-color: cha;
+//@import 'abstracts/_variables';
+
+.about-container {
+    padding: 2%;
+
+    .about-title {
+        padding: 2%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.2em;
+    }
+
+    .about-image {
+        padding: 2%;
+    }
+
+    .about-description {
+        padding: 2%;
+        font-size: 1em;
+        text-indent: 1.5em; 
+        text-align: justify
+    }
 }
